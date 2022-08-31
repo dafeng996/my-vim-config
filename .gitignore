@@ -1,0 +1,10 @@
+vim/plugged
+
+.netrwhist
+
+*.swi
+*.swk
+*.swm
+*.swo
+*.swn
+*.swp
