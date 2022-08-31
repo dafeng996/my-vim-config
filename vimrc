@@ -30,6 +30,7 @@ let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 let g:Lf_GtagsSource = 1
 let g:Lf_GtagsAutoGenerate = 1
+"https://ftp.gnu.org/pub/gnu/global/global-6.6.8.tar.gz
 let g:Lf_Gtagsconf = '/home/cheng/vim-config/gtags.conf'
 let g:Lf_UseMemoryCache = 0
 let g:Lf_UseCache = 0
