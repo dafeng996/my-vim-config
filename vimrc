@@ -12,6 +12,7 @@ packadd! onedark.vim
 "endif
 
 call plug#begin()
+  "LeaderF rg 依赖 https://github.com/BurntSushi/ripgrep/releases
   Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'rhysd/git-messenger.vim'
@@ -241,15 +242,16 @@ func CreateJSTemplate()
   call setline(4,"¦ ")
   call setline(5,"¦ Author: 大风")
   call setline(6,"¦ Date: ".strftime("%Y-%m-%d %H:%M:%S"))
-  call setline(7,"¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
-  call setline(8,"¦------------------------------------------------------*/")
-  call setline(9, "")
-  call setline(10, "/**")
-  call setline(11, " * 默认输出")
-  call setline(12, " * @returns {Object<any>}")
-  call setline(13, " */")
-  call setline(14, "export default {")
-  call setline(15, "}")
+  call setline(7,"¦ Version: 1.0")
+  call setline(8,"¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
+  call setline(9,"¦------------------------------------------------------*/")
+  call setline(10, "")
+  call setline(11, "/**")
+  call setline(12, " * 默认输出")
+  call setline(13, " * @returns {Object<any>}")
+  call setline(14, " */")
+  call setline(15, "export default {")
+  call setline(16, "}")
 endfunc
 autocmd BufRead *.js if getfsize(expand('%'))==0|exec ":call CreateJSTemplate()"|endif
 
@@ -260,24 +262,38 @@ func CreateVUETemplate()
   call setline(4," ¦ ")
   call setline(5," ¦ Author: 大风")
   call setline(6," ¦ Date: ".strftime("%Y-%m-%d %H:%M:%S"))
-  call setline(7," ¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
-  call setline(8," ¦----------------------------------------------------->")
-  call setline(9, "")
-  call setline(10, "<template>")
-  call setline(11, "  <div>vue template</div>")
-  call setline(12, "</template>")
-  call setline(13, "")
-  call setline(14, "<script>")
-  call setline(15, "export default {")
-  call setline(16, "  name: 'ComponentName'")
-  call setline(17, "}")
-  call setline(18, "</script>")
-  call setline(19, "")
-  call setline(20, "<style lang='less' scoped>")
-  call setline(21, "</style>")
-  call setline(22, "")
+  call setline(7," ¦ Version: 1.0")
+  call setline(8," ¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
+  call setline(9," ¦----------------------------------------------------->")
+  call setline(10, "")
+  call setline(11, "<template>")
+  call setline(12, "  <div>vue template</div>")
+  call setline(13, "</template>")
+  call setline(14, "")
+  call setline(15, "<script>")
+  call setline(16, "export default {")
+  call setline(17, "  name: 'ComponentName'")
+  call setline(18, "}")
+  call setline(19, "</script>")
+  call setline(20, "")
+  call setline(21, "<style lang='less' scoped>")
+  call setline(22, "</style>")
+  call setline(23, "")
 endfunc
 autocmd BufRead *.vue if getfsize(expand('%'))==0|exec ":call CreateVUETemplate()"|endif
+
+func CreateLessTemplate()
+  call setline(1,"/*------------------------------------------------------")
+  call setline(2,"¦ 文件名")
+  call setline(3,"¦ 文件描述")
+  call setline(4,"¦ ")
+  call setline(5,"¦ Author: 大风")
+  call setline(6,"¦ Date: ".strftime("%Y-%m-%d %H:%M:%S"))
+  call setline(7,"¦ Version: 1.0")
+  call setline(8,"¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
+  call setline(9,"¦------------------------------------------------------*/")
+endfunc
+autocmd BufRead *.js if getfsize(expand('%'))==0|exec ":call CreateJSTemplate()"|endif
 "---------------------------end-------------------------------
 
 "---------------------#region 自定义eslint 命令---------------
