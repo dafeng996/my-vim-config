@@ -293,7 +293,33 @@ func CreateLessTemplate()
   call setline(8,"¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
   call setline(9,"¦------------------------------------------------------*/")
 endfunc
-autocmd BufRead *.js if getfsize(expand('%'))==0|exec ":call CreateJSTemplate()"|endif
+autocmd BufRead *.less if getfsize(expand('%'))==0|exec ":call CreateLessTemplate()"|endif
+
+func CreateCTemplate()
+  call setline(1,"/*------------------------------------------------------")
+  call setline(2,"¦ 文件名")
+  call setline(3,"¦ 文件描述")
+  call setline(4,"¦ ")
+  call setline(5,"¦ Author: 大风")
+  call setline(6,"¦ Date: ".strftime("%Y-%m-%d %H:%M:%S"))
+  call setline(7,"¦ Version: 1.0")
+  call setline(8,"¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
+  call setline(9,"¦------------------------------------------------------*/")
+endfunc
+autocmd BufRead *.c if getfsize(expand('%'))==0|exec ":call CreateLessTemplate()"|endif
+
+func CreateHTemplate()
+  call setline(1,"/*------------------------------------------------------")
+  call setline(2,"¦ 文件名")
+  call setline(3,"¦ 文件描述")
+  call setline(4,"¦ ")
+  call setline(5,"¦ Author: 大风")
+  call setline(6,"¦ Date: ".strftime("%Y-%m-%d %H:%M:%S"))
+  call setline(7,"¦ Version: 1.0")
+  call setline(8,"¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
+  call setline(9,"¦------------------------------------------------------*/")
+endfunc
+autocmd BufRead *.h if getfsize(expand('%'))==0|exec ":call CreateLessTemplate()"|endif
 "---------------------------end-------------------------------
 
 "---------------------#region 自定义eslint 命令---------------
@@ -301,3 +327,8 @@ autocmd BufRead *.js if getfsize(expand('%'))==0|exec ":call CreateJSTemplate()"
 command Eslint :execute '!eslint --fix %' | edit
 "command Eslint :silent exec '!eslint --fix %' | edit
 "---------------------------end-------------------------------
+
+"---------------------#region C 语言风格缩进---------------
+autocmd FileType c setlocal et sta sw=4 sts=4
+autocmd FileType cpp setlocal et sta sw=4 sts=4
+"----------------------------end---------------------------
