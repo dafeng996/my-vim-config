@@ -116,7 +116,7 @@ let g:javascript_plugin_jsdoc                 = 1
 let g:javascript_plugin_ngdoc                 = 1
 let g:javascript_plugin_flow                  = 1
 "≠
-"
+"!==
 " 建议安装jetbrains字体
 let g:javascript_conceal_function             = "ƒ"
 let g:javascript_conceal_null                 = "ø"
@@ -128,6 +128,9 @@ let g:javascript_conceal_prototype            = "¶"
 let g:javascript_conceal_static               = "•"
 let g:javascript_conceal_super                = "Ω"
 let g:javascript_conceal_arrow_function       = "⇒"
+let g:javascript_conceal_import               = "∾"
+let g:javascript_conceal_from                 = "•"
+let g:javascript_conceal_export               = "↩"
 "let g:javascript_conceal_noarg_arrow_function = "🞅"
 "let g:javascript_conceal_underscore_arrow_function = "🞅"
 set conceallevel=1

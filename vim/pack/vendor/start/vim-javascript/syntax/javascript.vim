@@ -90,6 +90,9 @@ exe 'syntax keyword jsNan       NaN              '.(exists('g:javascript_conceal
 exe 'syntax keyword jsPrototype prototype        '.(exists('g:javascript_conceal_prototype') ? 'conceal cchar='.g:javascript_conceal_prototype  : '')
 exe 'syntax keyword jsThis      this             '.(exists('g:javascript_conceal_this')      ? 'conceal cchar='.g:javascript_conceal_this       : '')
 exe 'syntax keyword jsSuper     super  contained '.(exists('g:javascript_conceal_super')     ? 'conceal cchar='.g:javascript_conceal_super      : '')
+exe 'syntax keyword jsImport    import           '.(exists('g:javascript_conceal_import')    ? 'conceal cchar='.g:javascript_conceal_import     : '')
+exe 'syntax keyword jsExport    export           '.(exists('g:javascript_conceal_export')    ? 'conceal cchar='.g:javascript_conceal_export     : '')
+exe 'syntax keyword jsFrom      from             '.(exists('g:javascript_conceal_from')      ? 'conceal cchar='.g:javascript_conceal_from       : '')
 
 " Statement Keywords
 syntax match   jsBlockLabel              /\<\K\k*\s*::\@!/    contains=jsNoise skipwhite skipempty nextgroup=jsBlock
