@@ -312,6 +312,20 @@ func CreateCTemplate()
 endfunc
 autocmd BufRead *.c if getfsize(expand('%'))==0|exec ":call CreateLessTemplate()"|endif
 
+func CreateCPPTemplate()
+  call setline(1,"/*------------------------------------------------------")
+  call setline(2,"¦ 文件名")
+  call setline(3,"¦ 文件描述")
+  call setline(4,"¦ ")
+  call setline(5,"¦ Author: 大风")
+  call setline(6,"¦ Email: 1236192@qq.com")
+  call setline(7,"¦ Date: ".strftime("%Y-%m-%d %H:%M:%S"))
+  call setline(8,"¦ Version: 1.0")
+  call setline(9,"¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
+  call setline(10,"¦------------------------------------------------------*/")
+endfunc
+autocmd BufRead *.cpp if getfsize(expand('%'))==0|exec ":call CreateCPPTemplate()"|endif
+
 func CreateHTemplate()
   call setline(1,"/*------------------------------------------------------")
   call setline(2,"¦ 文件名")
@@ -325,6 +339,20 @@ func CreateHTemplate()
   call setline(10,"¦------------------------------------------------------*/")
 endfunc
 autocmd BufRead *.h if getfsize(expand('%'))==0|exec ":call CreateLessTemplate()"|endif
+
+func CreatePyTemplate()
+  call setline(1,"/*------------------------------------------------------")
+  call setline(2,"¦ 文件名")
+  call setline(3,"¦ 文件描述")
+  call setline(4,"¦ ")
+  call setline(5,"¦ Author: 大风")
+  call setline(6,"¦ Email: 1236192@qq.com")
+  call setline(7,"¦ Date: ".strftime("%Y-%m-%d %H:%M:%S"))
+  call setline(8,"¦ Version: 1.0")
+  call setline(9,"¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
+  call setline(10,"¦------------------------------------------------------*/")
+endfunc
+autocmd BufRead *.cpp if getfsize(expand('%'))==0|exec ":call CreatePyTemplate()"|endif
 "---------------------------end-------------------------------
 
 "---------------------#region 自定义eslint 命令---------------
