@@ -310,7 +310,7 @@ func CreateCTemplate()
   call setline(9,"¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
   call setline(10,"¦------------------------------------------------------*/")
 endfunc
-autocmd BufRead *.c if getfsize(expand('%'))==0|exec ":call CreateLessTemplate()"|endif
+autocmd BufRead *.c if getfsize(expand('%'))==0|exec ":call CreateCTemplate()"|endif
 
 func CreateCPPTemplate()
   call setline(1,"/*------------------------------------------------------")
@@ -338,7 +338,7 @@ func CreateHTemplate()
   call setline(9,"¦ FilePath: ".expand("%:r").expand(".").expand("%:e"))
   call setline(10,"¦------------------------------------------------------*/")
 endfunc
-autocmd BufRead *.h if getfsize(expand('%'))==0|exec ":call CreateLessTemplate()"|endif
+autocmd BufRead *.h if getfsize(expand('%'))==0|exec ":call CreateHTemplate()"|endif
 
 func CreatePyTemplate()
   call setline(1,"/*------------------------------------------------------")
