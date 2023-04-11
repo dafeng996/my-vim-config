@@ -205,7 +205,6 @@ let g:onedark_color_overrides = {
   \ "background": { "gui": "#282C34", "cterm": "235", "cterm16": "NONE" },
   \ "comment_grey": { "gui": "#5C6370", "cterm": "59", "cterm16": "7" },
   \ "gutter_fg_grey": { "gui": "#4B5263", "cterm": "238", "cterm16": "8" },
-  \ "cursor_grey": { "gui": "#2C323C", "cterm": "236", "cterm16": "0" },
   \ "visual_grey": { "gui": "#3E4452", "cterm": "237", "cterm16": "8" },
   \ "menu_grey": { "gui": "#3E4452", "cterm": "237", "cterm16": "7" },
   \ "special_grey": { "gui": "#3B4048", "cterm": "238", "cterm16": "7" },
@@ -218,6 +217,11 @@ let g:lightline = {
   \ }
 let g:airline_theme='onedark'
 "---------------------------end-------------------------------
+
+
+"---------------------#region 背景透明------------------------
+hi Normal ctermfg=252 ctermbg=none
+"------------------------#endregion---------------------------
 
 
 "---------------------微信小程序高亮方案----------------------
